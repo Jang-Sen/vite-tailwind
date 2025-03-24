@@ -6,12 +6,15 @@ export default defineConfig({
   base: '/',
   plugins: [react()],
   preview: {
-    port: 3000,
+    port: 5173,
     strictPort: true,
   },
   server: {
-    port: 3000,
+    port: 5173,
     strictPort: true,
     host: true,
+    watch: {
+      usePolling: true, // 폴링 방식으로 파일 변경 감지
+    },
   },
 });
